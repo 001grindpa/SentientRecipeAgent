@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <meta property="og:description" content="AI powered culinary assistant designed to transform the way you discover meals.">
         <meta property="og:title" content="Steve, your smart recipe buddy">
         <title>Agent Steve</title>
-        <script src="url_for('static', filename='script.js')"></script>
-        <link rel="stylesheet" href="url_for('static', filename='style.css')">
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         {% block body %}
