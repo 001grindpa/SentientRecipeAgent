@@ -3,15 +3,139 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
+#landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-image: linear-gradient(lightblue, white);
+}
 
-header {
-    outline: 1px solid red;
+.section-1 {
+    margin: auto;
+    margin-bottom: 35px;
+}
+.section-1 h3 {
+    margin-bottom: 5px;
 }
 .sideNote {
     background-color: green;
     color: white;
-    padding: 10px;
+    padding: 5px;
+    font-size: small;
     text-align: center;
     width: fit-content;
     margin: 5px;
+    margin-left: auto;
+}
+main {
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    width: fit-content;
+    line-height: 1.35;
+}
+@media(min-width: 850px) {
+    main {
+        width: 850px;
+    }
+}
+.section-3 {
+    margin-top: 30px;
+}
+.section-3 img {
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+    border-radius: 40px;
+    padding: 3px;
+    margin: 3px;
+}
+.section-3 h2 ~ div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+form .btn {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgb(1, 166, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form .btn:hover {
+    background-color: green;
+}
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer div {
+    font-size: small;
+}
+footer img {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+footer img:hover {
+    background-color: black;
+}
+/* index page css */
+.hi {
+    background-color: lightblue;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.hi .cancel {
+    width: fit-content;
+    margin-left: auto;
+    padding: 5px;
+    cursor: pointer;
+    /* outline: 1px solid red; */
+}
+.hi img:nth-child(1) {
+    width: 25px;
+    height: 25px;
+}
+.hi div:nth-child(2) img {
+    width: 250px;
+    height: 250px;
+}
+.hi div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hi div:nth-child(2) div {
+    padding: 10px;
+    align-self: flex-start;
+}
+.hi div:nth-child(2) button {
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: green;
+    margin-top: 15px;
+    margin-left: 5px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }

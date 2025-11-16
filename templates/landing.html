@@ -4,4 +4,44 @@
     <header>
         <div class="sideNote">Another Masterpiece</div>
     </header>
+    <main>
+        <div class="section-1">
+            <h1>Meet Steve, Your Recipe Buddy</h1>
+            <h3>Cook Smarter With What You Have</h3>
+            <div>
+                <div>Steve turns your available ingredients into delicious meals from around the world.</div>
+            </div>
+        </div>
+        <div class="section-2">
+            <h2>How It Works</h2>
+            <div>Just type in the food items you have, Steve analyzes your list, matches ingredients intelligently and recommends global dishes you can cook right away with clear instructions.</div>
+        </div>
+        <div class="section-3">
+            <h2>Features</h2>
+            <div>
+                <img src="{{ url_for('static', filename='images/globe.png') }}" alt="globe_logo">
+                <div>Worldwide Recipe Ideas</div>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/brain.png') }}" alt="brain_logo">
+                <div>Smart Ingredient Matching</div>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/bolt.png') }}" alt="bolt_logo">
+                <div>Fast, intelligent Responses</div>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/feed.png') }}" alt="spoon&fork_logo">
+                <div>Simple, Clear Instructions</div>
+            </div>
+        </div>
+        <form action="/landing" method="post">
+            <input name="name" value="enter" type="hidden">
+            <input class="btn" type="submit" value="Launch Steve">
+        </form>
+    </main>
+    <footer>
+        <div>A project enginnered by Grindpa</div>
+        <div><a href="https://www.x.com/0xGrindpa"><img src="{{ url_for('static', filename='images/twitter_w.png') }}" alt="x.logo"></a><div>X/Twitter</div></div>
+    </footer>
 {% endblock %}

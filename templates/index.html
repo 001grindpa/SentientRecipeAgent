@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <i>Hello, welcome</i>    
+    <header>
+        <div class="sideNote">Another Masterpiece</div>
+    </header>
+    <main>
+        <div class="hi">
+            <div class="cancel ready"><img src="{{ url_for('static', filename='images/x.png') }}" alt="cancel"></div>
+            <div>
+                <div>
+                    <div>I'm Steve, your recipe buddy. I can turn your available ingredients into delicious meals from around the world, let's get to cooking when you're ready.</div>
+                    <button class="ready">Ready</button>
+                    <input id="cl" type="hidden" value="{{ x }}">
+                </div>
+                <img src="{{ url_for('static', filename='images/steve_hi.png') }}" alt="steve">
+            </div>
+        </div>
+    </main>
 {% endblock %}
