@@ -117,13 +117,23 @@ footer img:hover {
     font-size: small;
     font-weight: bold;
 }
+.hiCont {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+}
 .hi {
+    width: fit-content;
     background-color: lightblue;
     border-radius: 10px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%)
+    margin-top: 150px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
 }
 .hi .cancel {
     width: fit-content;
@@ -218,6 +228,17 @@ footer img:hover {
 #cleanForm button:hover {
     background-color: rgb(0, 153, 0);
 }
+.analyse {
+    text-align: center;
+    padding: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: none;
+}
+.analyse img {
+    width: 80px;
+    height: 80px;
+}
 .query {
     background-color: lightblue;
     padding-top: 10px;
@@ -225,6 +246,9 @@ footer img:hover {
     margin-top: 5px;
     margin-bottom: 15px;
 }
+/* .main {
+    display: none;
+} */
 .main img {
     width: 200px;
     height: 200px;
@@ -232,9 +256,22 @@ footer img:hover {
 }
 .query2 {
     background-color: lightblue;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
     display: none;
+}
+.query2 img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.query2 img:hover {
+    background-color: rgb(133, 207, 232);
 }
 .query2 .confirm {
     margin: auto;
@@ -242,6 +279,9 @@ footer img:hover {
     background-color: lightgreen;
     width: fit-content;
     padding: 25px;
+}
+.query2 .confirm form {
+    text-align: center;
 }
 .query2 .confirm button {
     padding: 15px;
@@ -252,11 +292,12 @@ footer img:hover {
     background-color: green;
     color: white;
     border-radius: 20px;
+    margin: auto;
     cursor: pointer;
 }
 .query2 .confirm span button {
     background-color: lightcoral;
-    margin-left: 20px;
+    margin-top: 10px;
 }
 .query2 .confirm button:hover {
     background-color: rgb(0, 161, 0);
@@ -265,14 +306,21 @@ footer img:hover {
     background-color: rgb(243, 106, 106);
 }
 .instruct {
-    width: fit-content;
+    margin-top: 10px;
+    width: 400px;
     margin: auto;
     transform: translateX(-10%);
+}
+@media (min-width: 850px) {
+    .instruct {
+        width: fit-content;
+        transform: translateX(-30%);
+    }
 }
 .ingredients {
     margin-top: 5px;
     margin-bottom: 30px;
 }
 .index footer {
-    margin-top: 220px;
+    margin-top: 250px;
 }

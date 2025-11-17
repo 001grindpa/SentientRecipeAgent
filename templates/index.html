@@ -13,36 +13,43 @@
             <div class="sideNote">Another Masterpiece</div>
         </header>
         <main>
-            <div class="hi">
-                <div class="cancel ready"><img src="{{ url_for('static', filename='images/x.png') }}" alt="cancel"></div>
-                <div>
+            <div class="hiCont">
+                <div class="hi">
+                    <div class="cancel ready"><img src="{{ url_for('static', filename='images/x.png') }}" alt="cancel"></div>
                     <div>
-                        <div>I'm Steve, your recipe buddy. I can turn your available ingredients into delicious meals from around the world, let's get to cooking when you're ready.</div>
-                        <button class="ready">Ready</button>
-                        <input id="cl" type="hidden" value="{{ x }}">
+                        <div>
+                            <div>I'm Steve, your recipe buddy. I can turn your available ingredients into delicious meals from around the world, let's get to cooking when you're ready.</div>
+                            <button class="ready">Ready</button>
+                            <input id="cl" type="hidden" value="{{ x }}">
+                        </div>
+                        <img src="{{ url_for('static', filename='images/steve_hi.png') }}" alt="steve">
                     </div>
-                    <img src="{{ url_for('static', filename='images/steve_hi.png') }}" alt="steve">
                 </div>
             </div>
             <div class="slide">
                 <div>slide area for ads</div>
             </div>
             <div class="query2">
+                <img id="backBtn" src="{{ url_for('static', filename='images/left_tag.png') }}" alt="left_tag">
                 <div class="confirm">
-                    <div>Is this everything?</div>
+                    <div><!--Dobby will add 'Is this everything?' here when neccessary--></div>
                     <div class="ingredients"><!--js will insert the clean ingredients here--></div>
                     <form action="/query">
                         <!--the input below will contain the final query sent to the llm for recipe retrieval-->
                         <input type="hidden" name="fQuery" id="fQuery">
-                        <button>Yes</button><span><button>No</button></span>
-                    </form>
+                        <button type="submit">Yes</button>
+                    </form><span><button>No</button></span>
                 </div>
             </div>
             <div class="query">
+                <div class="analyse">
+                    <div>Steve is analyzing your input</div>
+                    <img src="{{ url_for('static', filename='images/load_circle.gif') }}" alt="loader">
+                </div>
                 <div class="main">
                     <img src="{{ url_for('static', filename='images/steve_tray3.png') }}" alt="steve_img">
                     <form id="cleanForm" action="/clean" method="post">
-                        <textarea name="q" id="query" placeholder="Enter ingredients here..."></textarea>
+                        <textarea name="q" id="query" autofocus placeholder="Enter ingredients here..."></textarea>
                         <button type="submit">Enter</button>
                     </form>
                 </div>
@@ -52,6 +59,7 @@
                     <div>Instructions are simple:</div>
                     <li>Make your ingredient description as precise as possible</li>
                     <li>State the origin of your ingredient if neccessary</li>
+                    <li>If you have a particular meal in mind, state it alongside your ingredients</li>
                 </ul>
             </div>
         </main>
