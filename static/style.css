@@ -330,6 +330,7 @@ footer img:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 .recoCont img {
     width: 400px;
@@ -350,16 +351,19 @@ footer img:hover {
     border-radius: 20px;
     cursor: pointer;
     display: block;
+    transition: 0.25s;
+}
+.recoDiv button:hover {
+    background-color: rgb(27, 148, 142);
 }
 .recoDiv #finalForm1 {
     align-self: flex-end;
     display: none;
 }
-.recoDiv #finalForm2 {
-    align-self: flex-start;
-}
 .recoDiv #finalForm2 button {
     margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 .recoDiv #finalForm2 input {
     padding: 10px;

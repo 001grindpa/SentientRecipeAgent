@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             let form = new FormData(q2Form);
             let fQuery = form.get("fQuery");
-            alert("Processing recommendations...")
+            alert("Steve is thinking...");
 
             let r = await fetch("/recommend", {
                 method: "POST",
